@@ -87,6 +87,7 @@
 <body>
   <div id="GameDiv" cc_exact_fit_screen="true">
     <div id="GameLoadingDiv016">
+      <img id="loadingLogo" src="./image/logo.png" />
       <img src="./image/loading.svg" />
     </div>
     <div id="Cocos3dGameContainer">
@@ -104,38 +105,10 @@
 <script src="src/system.bundle.543e6.js" charset="utf-8"> </script>
 
 <!-- Import map -->
-<script src="src/import-map.241ec.json" type="systemjs-importmap" charset="utf-8"> </script>
+<script src="src/import-map.45fcd.json" type="systemjs-importmap" charset="utf-8"> </script>
 
 <script>
-    System.import('./index.50e30.js').catch(function(err) { console.error(err); })
-window['wzbResZipList'] = ['assets/wzbResCache0.4c589.zip', 'assets/wzbResCache1.4c589.zip', 'assets/wzbResCache2.4c589.zip', 'assets/wzbResCache3.4c589.zip'];
-
-async function downloadResCache() {
-    async function downloadZip(url) {
-        try {
-            const response = await fetch(url);
-            const buffer = await response.arrayBuffer();
-            return buffer;
-        } catch (e) {
-            error(e.message);
-        }
-    }
-
-    const resZipList = window['wzbResZipList'];
-
-    if (resZipList !== undefined && resZipList.length > 0) {
-        const promises = [];
-        for (let i = 0; i < resZipList.length; i++) {
-            promises.push(downloadZip(resZipList[i]));
-        }
-        window['wzbDownloadResCache'] = promises;
-        return;
-    } else {
-        error("[WebZipBundle].downloadResCache: resZipList is empty");
-    }
-}
-
-downloadResCache();
+    System.import('./index.25aa7.js').catch(function(err) { console.error(err); })
 </script>
 
     <script type="text/javascript">
